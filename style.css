@@ -1,0 +1,883 @@
+body{
+    margin:0;
+    padding: 0;
+}
+
+#container{
+    width: 99.89%;
+    height: auto;
+    margin: 0 auto;
+    border: 1px solid black;
+    background-color: rgb(65, 21, 107);
+}
+
+/*Navigation bar properties*/
+#nav{
+    width: 100%;
+    height:13vh;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    display: flex;
+    justify-content:space-between;
+}
+
+#nav img:nth-child(1){
+    height: 91%;
+    width: 8%;
+    margin-left: 2%;
+    margin-top: 0.3%;
+}
+
+
+
+#nav-left{
+    display: flex;
+    margin-right:30%;
+    justify-content: flex-start;
+}
+
+#nav-left p{
+    letter-spacing: 12px;
+    font-weight: 900;
+    font-size: xx-large;
+}
+
+#nav-right{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa-search{
+    position: absolute;
+    left: 72.7%;
+    top:6%;
+}
+
+#nav-right .search{
+    width: 150%;
+    height: 35%;
+    padding: 2%;
+    text-align: center;
+    border:1px solid tomato;
+    margin-top: 12%;
+    border-radius: 15px 15px;
+}
+
+#nav-right .search:focus{
+    border-radius: 0;
+}
+
+.fa-bell{
+    color: white;
+    width: 20%;
+    margin-top: 9%;
+    font-size: larger;
+    margin-left: 25%;
+}
+
+#nav-right img{
+    border-radius: 50%;
+    margin-right: 2%;
+    border: 2px solid white;
+}
+
+/*main include both left and right sidebar*/
+
+#main{
+    width:100%;
+    height:76vh;
+    display: flex ;
+    margin-top: 5%;
+}
+
+/*body include main section of page*/
+#body{
+    width: 76%;
+    overflow: auto;
+} 
+
+#body::-webkit-scrollbar{
+    width:0px;
+}
+
+#container::-webkit-scrollbar{
+    width:0px;
+}
+
+/*assigning dimensions to favourite list*/
+#side-nav{
+    height: 60vh;
+    width: 23%;
+    color: white;
+    overflow: auto;
+}
+
+#side-nav::-webkit-scrollbar{
+    width:0px;
+}
+
+/*section css start from here*/
+/*body carousel properties*/
+#carousel{
+    width: 82%;
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    margin: 0 auto;
+}
+
+#carousel-ul{
+    position: relative;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 40vh;
+    margin-left: 60px;
+}
+
+#carousel-ul li{
+    list-style: none;
+    position: relative;
+    width:25%;
+    height: 100%;
+    border-right: 1px solid #000;
+    float: left;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+}
+
+#carousel-ul :hover li{
+    width: 50%;
+}
+
+
+#carousel-ul li:hover{
+    width: 50%;
+}
+
+#carousel-ul li .content{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    background: rgba(0, 0, 0, .8);
+    color: #fff;
+    opacity: 0;
+}
+
+#carousel-ul li:hover .content
+{
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+#carousel-ul li:nth-child(1)
+{
+    background: url(assets/bollywo.jpg);
+    background-size: cover;
+    background-position:left;
+}
+
+#carousel-ul li:nth-child(2)
+{
+    background: url(assets/hollywood.jpg);
+    background-size: cover;
+    background-position:left;
+}
+
+#carousel-ul li:nth-child(3)
+{
+    background: url(assets/pubjabiSong.jpg);
+    background-size: cover;
+    background-position:left;
+}
+
+#sections{
+    color:white;
+    height: 100%;
+    margin-left: 60px;
+    margin-right: 70px;
+}
+
+/*various sections properties  start here*/
+#latest-release{
+    width: 100%;
+    height: 35vh;
+    margin-top: 5%;
+}
+
+
+@media only screen and (min-width:600px){
+    #onsim-container{ 
+        height: 35%; 
+        width: 100%; 
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.onism{
+    width: 50%;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.onism img{
+    width: 20%;
+    height: 80%;
+}
+
+.onism-desc{
+    box-sizing:border-box;
+    margin-left: 20px;
+    width: 200%;
+    margin-right: 20px;
+    
+}
+
+.onism-desc .dots{
+    text-align: right;
+}
+
+.onism-desc{
+ position: relative;
+}
+
+
+.onism-desc .dots-hover{
+    position: absolute;  
+    width: 100px;
+    height: 110%;
+    color: white;
+    background-color: black;
+    text-align: center;
+    display: none;  
+    left:75%;
+    top:-5%; 
+} 
+
+
+.dots:hover+ .dots-hover{
+    display: block;
+
+}
+
+
+.os-and-time{
+    display: flex;
+    justify-content: space-between;
+}
+
+.os-and-time .os{
+    text-align: left;
+}
+
+.os-and-time .time{
+   
+    text-align: right;
+}
+
+.onism-desc .day{
+    margin-bottom: 30px;
+} 
+
+.onism a{
+    display: block;
+    width:60%;
+}
+
+
+#play-img{
+    width: 91%;
+    height: 80%;
+    opacity: 0.4;
+    border: 3px solid black;
+}
+
+.fa-play-circle{
+    position: relative;
+    color: rgb(3, 224, 224);
+    top: -59%;
+    right: -28%;
+    font-size: xx-large;
+
+}
+
+/*player is made fixed so that it is visible even on scroll*/
+#player{   
+    position: fixed;
+    width:100%;
+    height:10vh; 
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    display: none;  
+    bottom:0;
+    margin-left: -37.9%;
+    text-align: center;
+    border: 1px solid tomato;
+    z-index: 100;
+    
+}
+
+#details{
+    width:15%;
+    margin-left:10%;
+}
+
+@media only screen and (min-width:600px){
+    #player #controls{
+        font-size: xx-large;
+        width:20%;
+        justify-content: space-evenly;
+        position: relative;
+        left: 34.8%;
+        color: black;
+    }
+}
+
+/*some controls for the player div*/
+#controls span{
+    margin-left: 18%;
+    letter-spacing: 3.5px;
+    background: -webkit-linear-gradient(rgb(230, 227, 227), rgb(189, 231, 208));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+#controls i{
+    margin-left: 18%;
+}
+
+/* show player on click*/
+#in-check{
+    position: relative;
+    top: -58%;
+    right: 7%;
+    background-color: rgb(3, 224, 224);
+    opacity:0; 
+}
+
+input[type="checkbox"]{
+    width: 30px; 
+    height: 30px; 
+}
+
+#in-check:checked+ #player{
+    display: block;  
+}
+
+.fav-li{
+    position: relative;
+}
+
+.fav-li-detail .play{
+    border: 3px solid black;
+} 
+
+#side-checkBox{
+    position: absolute;
+    right: 12.5rem;
+    top: 2rem;
+    z-index: 1;
+}
+
+
+.fav-li-detail input{
+    opacity: 0;
+}
+
+#side-checkBox:checked+ #player{
+    display: block;
+}
+
+.fav-li-detail #player{
+    margin-left: -81%;
+}
+
+#artists{
+    height: 30vh;
+    width: 100%;
+    margin-top: 3%;
+}
+
+#artists-div{
+    display:flex;
+    justify-content: space-between;
+    
+}
+
+.artist{
+    height:150px;
+    width: 160px;
+    border: 2px solid black;
+    border-radius: 80%;
+}
+
+@media only screen and (min-width:600px){
+    
+    #music-types{
+        height: 20vh;
+        border: 1px solid yellowgreen;
+        display: flex;
+        justify-content: space-around;
+        background-color: tomato;
+    }
+}
+
+#type-station{
+    margin-top:3%;
+    border: 3px solid sienna;
+}
+
+.type img{
+    height:70px;
+    width: 80px;
+    border: 2px solid black;
+    border-radius: 80%;
+    margin-bottom: 50%;
+}
+
+.type img:hover{
+    opacity: 0.2;
+}
+
+.type img:nth-child(1)
+{
+    border: 1px solid black;
+    border-radius: 0%;
+    margin-top: 60px;
+}
+
+.type h3{
+    position: relative;
+    font-weight: bolder;
+    top:40%;
+    left:35%;
+    text-shadow: rgb(10, 58, 53);
+    color: white;
+    opacity: 1;
+}
+
+.type img:hover{
+    opacity: 1;
+    background-color: violet;
+
+}
+
+#music-moods{
+    height: 32vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mood img{
+    height: 180px;
+    width: 300px;
+}
+
+.mood img:hover{
+    opacity: 0.3;
+}
+
+.mood h3
+{
+    margin:0;
+    padding: 0;
+    position: relative;
+    font-weight: bolder;
+    font-size: xx-large;
+    top:40%;
+    left:35%;
+    color: white;
+}
+
+#latest-eng{
+    height: 35vh;
+    margin-top: 5%;
+}
+
+
+#eng-desc{
+    display: flex;
+    justify-content: space-between;
+}
+
+#eng-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#eng-div .eng{
+    height:20vh;
+    width: 20vh;
+    border: 2px solid slategray;
+    margin-bottom: 2px;
+}
+
+#eng-div span{
+    text-align: center;
+}
+
+
+#latest-hindi{
+    height: 40vh;
+}
+
+#hindi-desc{
+    display: flex;
+    justify-content: space-between;
+}
+
+#hindi-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+#hindi-div .hindi{
+    height:20vh;
+    width: 20vh;
+    border: 2px solid slategray;
+    margin-bottom: 2px;
+}
+
+#hindi-div span{
+    text-align: center;
+}
+
+
+
+
+/****************************************Sidebar CSS start from here******************************************/
+
+
+#side-ul{
+    list-style-type: none;
+}
+#side-heading{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#arrow{
+    margin-left: 165px; 
+}
+
+#arrow-des{
+    text-align: center;
+    position: absolute;
+    background-color: black;
+    height: 11%;
+    width: 10%;
+    right:3.5%; 
+    margin-top:-1%;
+    display: none;
+}
+
+#arrow:hover+ #arrow-des{
+    display: block;
+}
+
+.fav-li{
+    display:flex;
+    justify-content: space-around; 
+}
+
+.fav-li img{
+    border: 1px solid black;
+}
+
+.fav-li-detail{
+    width:50%;
+    display:flex;
+    justify-content: space-between;
+ } 
+
+
+ .no{
+    margin-left: -1px;
+ }
+
+ .fav-singer{
+     text-align: center;
+ }
+
+.fa-heart{
+    color: yellow;
+    margin-top: 100%;
+} 
+
+.fav-singer{
+    font-style: italic;
+    margin-top:-2px;
+}
+
+.fav-li{
+    margin-top:12px;
+}
+
+/*managing for mobile friendliness*/
+@media only screen and (max-width:600px){
+    #container{
+        width: 99.89%;
+        height: 100vh;
+        margin: 0 auto;
+        border: 1px solid black;
+        background-color: rgb(65, 21, 107);
+    }
+
+    #nav{
+        width: 98%;
+        height:13vh;
+        background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+        display: flex;
+        justify-content:space-between;
+    }
+
+    #nav-left {
+        display: flex;
+        margin-right: 0%;
+        justify-content: flex-start;
+    }
+
+    #nav-left p {
+        letter-spacing: 5px;
+        font-weight: 600;
+        font-size: x-large;
+    }
+
+    #main{
+        width:100%;
+        height:83vh;
+        display: flex ;
+        margin-top: 5%;
+    }
+
+    #body{
+        margin-left: -9%;
+        width: 76%;
+        overflow: auto;
+    }     
+    
+    #side-nav {
+        height: 60vh;
+        width: 33%;
+        color: white;
+        margin-left: -13px;
+        margin-top: 0px;
+    }
+
+    .fav-li{
+        margin-left:-27px;
+    }
+
+    .fav-li img{
+        height: 75%;
+        width: 50%;
+    }
+
+    .fav-li .fa-heart{
+        margin-left: 20px;
+    }
+
+    .fa-search {
+        position: absolute;
+        left: 46.7%;
+        top: 5%;
+    }
+
+    #carousel-ul {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 79%;
+        height: 25vh;
+        margin-left: -7px;
+    }
+
+    #latest-release {
+        width: 227%;
+        height: 43vh;
+        margin-top: 0%;
+    }
+
+    #artists {
+        height: 17vh;
+        width: 100%;
+        margin-top: 73%;
+    }
+
+    #music-types {
+        margin-left: -47px;
+        height: 20vh;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #player {
+        position: fixed;
+        width: 122%;
+        background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+        display: none;
+        bottom: 0;
+        margin-left: -21.9%;
+        border: 1px solid tomato;
+    }
+
+    .body-play{
+        position: relative;
+        left: -18%;
+    }
+
+ 
+    #in-check {
+        position: absolute;
+        top: 10%;
+        left: 33%;
+    }
+
+    .os-and-time .time{
+        display: none;
+    }
+
+    .body-play .dots{
+        display: none;
+    }
+
+    #player #controls {
+        font-size: xx-large;
+        justify-content: space-evenly;
+        left: 34.8%;
+        color: black;
+    }
+    #play-img{
+       display: none;
+    }
+
+
+    #onsim-container {
+        height: 65%;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .onism{
+        margin-bottom: 0;
+    }
+
+    .onism img {
+        width: 0;
+        height: 0%;
+    }
+
+    .onism-desc {
+        font-size: small;
+    }
+
+    .onism a {
+        display: block;
+        width: 60%;
+        position: relative;
+        top: 65%;
+        right: 47%;
+    }
+
+    .fa-play-circle{
+        position: absolute;
+        top: 9%;
+        left: 46%;
+    }
+
+    .artist {
+        height: 55px;
+        width: 38px;
+        border: 2px solid black;
+        border-radius: 80%;
+    }
+
+    .type h3 {
+        font-size: xx-small;
+        position: relative;
+        font-weight: bolder;
+        top: 29%;
+        left: 22%;
+        text-shadow: rgb(10, 58, 53);
+        color: white;
+        opacity: 1;
+    }
+    #type-station {
+        margin-top: 3%;
+        border: 3px solid sienna;
+        height: 63px;
+        width: 64px;
+    }
+
+    .type img {
+        height: 51px;
+        width: 28px;
+        border: 2px solid black;
+        border-radius: 80%;
+        margin-bottom: 50%;
+    }
+
+    #music-moods {
+        height: 19vh;
+    }
+
+    .mood img {
+        height: 86px;
+        width: 69px;
+    }
+
+    .mood h3 {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        font-weight: bolder;
+        font-size: small;
+        top: 44%;
+        left: 13%;
+        color: white;
+    }
+
+    #eng-div .eng {
+        height: 9vh;
+        width: 5vh;
+    }
+
+    #eng-div span{
+        font-size: 10px;
+    }
+
+    #hindi-div .hindi {
+        height: 9vh;
+        width: 5vh;
+    }
+
+    #hindi-div span{
+        font-size: 10px;
+    }
+
+    #side-checkBox {
+      display: none;
+    }
+
+    #arrow {
+        margin-left: 60px;
+    }
+
+    #arrow-des {
+        text-align: center;
+        position: absolute;
+        background-color: black;
+        height: 15%;
+        width: 18%;
+        right: 3.5%;
+        margin-top: -1%;
+        display: none;
+    }
+}
